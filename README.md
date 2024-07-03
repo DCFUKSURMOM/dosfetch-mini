@@ -2,7 +2,7 @@
 
 Written in Turbo Pascal 7.
 
-![Screenshot of dosfetch](https://github.com/leahneukirchen/dosfetch/blob/master/screenshot.png)
+![Screenshot of dosfetch](https://github.com/DCFUKSURMOM/dosfetch-mini/blob/master/screenshot.png)
 
 Pull requests welcome!
 
