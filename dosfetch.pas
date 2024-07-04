@@ -88,7 +88,7 @@ begin
    writeln(round((free/total)*100), '% free)');
 end;
 
-procedure dosver;
+procedure osver;
 var maj, min, ven : byte;
     smaj, smin, sven :  string;
 begin
@@ -108,6 +108,22 @@ begin
     $FF : write('MS DOS ');
     else write('Unknown DOS ');
   end;
+end;
+
+procedure dosver;
+var maj, min, ven : byte;
+    smaj, smin, sven :  string;
+begin
+   asm
+     mov ax, $3000;
+     int $21;
+     mov ven, bh;
+     mov ax, $3306;
+     int $21;
+     mov maj, bl;
+     mov min, bh;
+   end;
+  write('DOS ');
   writeln(maj, '.', min);
 end;
 
@@ -138,27 +154,16 @@ begin
      writeln('no');
 end;
 
-
-{procedure colorline(s : string);
-var y, b, r : string;
-begin
-   textcolor(yellow);     write(copy(s, 1, 14));
-   textcolor(lightblue);  write(copy(s, 15,14));
-   textcolor(lightred);   write(copy(s, 29,14));
-   normvideo;
-   writeln;
-end;}
 begin
    clrscr;
    writeln;
-   window(0, 0, 0, 0);
-   textcolor(cyan); write('OS: '); normvideo; dosver;
+   textcolor(cyan); write('OS: '); osver; write('Reporting: '); normvideo; dosver;
    textcolor(cyan); write('Shell: '); normvideo; writeln(getenv('COMSPEC'));
    textcolor(cyan); write('Floppy drives: '); normvideo; floppy;
    textcolor(cyan); write('Disk: '); normvideo; disksize(0);
    textcolor(cyan); write('Base Memory: '); normvideo; base_memory;
    textcolor(cyan); write('Ext. Memory: '); normvideo; extended_memory;
    textcolor(cyan); write('Floating Point Unit: '); normvideo; fpu;
-   textcolor(cyan); write('DOSFETCH Written by Leah Neukirchen, Modified by DCFUKSURMOM');
+   textcolor(cyan); write('DOSFETCH Written by Leah Neukirchen, Modified by DCFUKSURMOM'); normvideo;
    writeln;
 end.
