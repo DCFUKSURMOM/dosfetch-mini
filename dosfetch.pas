@@ -157,7 +157,7 @@ end;
 begin
    clrscr;
    writeln;
-   textcolor(cyan); write('OS: '); osver; write('Reporting: '); normvideo; dosver;
+   textcolor(cyan); write('OS: '); normvideo; osver; textcolor(cyan); write('Reporting: '); normvideo; dosver;
    textcolor(cyan); write('Shell: '); normvideo; writeln(getenv('COMSPEC'));
    textcolor(cyan); write('Floppy drives: '); normvideo; floppy;
    textcolor(cyan); write('Disk: '); normvideo; disksize(0);
