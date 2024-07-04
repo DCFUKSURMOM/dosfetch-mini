@@ -1,4 +1,4 @@
-# dosfetch, a neofetch clone for DOS
+# DOSFetch mini, a modified version of DOSFetch with the giant DOS logo removed for a more compact look 
 
 Written in Turbo Pascal 7.
 
@@ -11,7 +11,7 @@ Pull requests welcome!
 You need Turbo Pascal 6 or later (because of asm) to compile the source:
 
 ```
-tpc dosfetch
+tpc dfm
 
 ```
 

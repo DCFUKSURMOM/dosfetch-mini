@@ -1,12 +1,12 @@
-(* dosfetch - a neofetch clone for DOS
+(* dosfetch mini - a modified version of dosfetch with the giant dos logo removed for a more compact look 
  *
- * Written by Leah Neukirchen <leah@vuxu.org>
- *
+ * Origianlly ritten by Leah Neukirchen <leah@vuxu.org>
+ * Modified by DCFUKSURMO
  * To the extent possible under law, the creator of this work has waived
  * all copyright and related or neighboring rights to this work.
  *)
 
-program dosfetch;
+program dfm;
 
 uses crt, dos;
 
