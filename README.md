@@ -18,6 +18,7 @@ tpc dosfetch
 ### Copying
 
 Written by Leah Neukirchen <leah@vuxu.org>
+Modified by DCFUKSURMOM
 
 To the extent possible under law, the creator of this work has waived
 all copyright and related or neighboring rights to this work.
